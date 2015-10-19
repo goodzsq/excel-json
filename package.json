@@ -1,8 +1,11 @@
 {
   "name": "excel-json",
-  "version": "1.0.1",
-  "description": "convert excel file to json",
+  "version": "1.0.4",
+  "description": "Convert excel file to json",
   "main": "lib/index.js",
+  "bin": {
+    "excel-json": "./bin/cmd.js"
+  },  
   "dependencies": {
     "commander": "^2.9.0",
     "lodash": "^3.10.1",
