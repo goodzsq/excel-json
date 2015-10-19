@@ -1,7 +1,7 @@
 {
-  "name": "nodejs",
+  "name": "excel-json",
   "version": "1.0.0",
-  "description": "",
+  "description": "convert excel file to json",
   "main": "lib/index.js",
   "dependencies": {
     "commander": "^2.9.0",
@@ -15,6 +15,10 @@
   "scripts": {
     "test": "mocha --recursive"
   },
-  "author": "goodzsq",
-  "license": "ISC"
+  "author": "goodzsq@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodzsq/excel-json.git"
+  }
 }
