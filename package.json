@@ -1,0 +1,20 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^3.10.1",
+    "xlsx": "^0.8.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.2"
+  },
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "goodzsq",
+  "license": "ISC"
+}
