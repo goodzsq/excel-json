@@ -1,6 +1,6 @@
 {
   "name": "excel-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert excel file to json",
   "main": "lib/index.js",
   "dependencies": {
