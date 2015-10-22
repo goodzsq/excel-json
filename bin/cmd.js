@@ -26,7 +26,7 @@ function dump(filename, outputDir){
 	var data = parser(filename);
 	var buf = "module.exports = {\n";
 	for(var sheetName in data){
-		buf += '  ' + filename + ": require('./" + filename + ".json'),\n";
+		buf += '  ' + sheetName + ": require('./" + sheetName + ".json'),\n";
 		fs.writeFileSync(outputDir + '/' + sheetName + '.json', JSON.stringify(data[sheetName]));
 	}
 	buf += '};';
