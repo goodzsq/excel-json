@@ -44,7 +44,7 @@ function dumpTypescript(filename, outputDir) {
 	var sheets = [];
 	for (var sheetName in data) {
 		sheets.push(sheetName);
-		buf += "import " + sheetName + " from './" + sheetName + ".ts'\n";
+		buf += "import " + sheetName + " from './" + sheetName + "'\n";
 		fs.writeFileSync(outputDir + '/' + sheetName + '.ts', 'export default ' + JSON.stringify(data[sheetName]));
 	}
 	buf += 'export default {' + sheets.toString() + '}';
