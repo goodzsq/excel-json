@@ -11,7 +11,6 @@ program
 	.option('-t, --typescript', 'convert to typescript')
 	.option('-f, --file <*.xlsx>', 'xlst file')
 	.option('-o, --output <outpuDir>', 'output directory')
-	.option('-a, --buildaction', 'convert actons file to js')
 	.parse(process.argv);
 
 if (!program.file || !fs.existsSync(program.file)) {
@@ -52,23 +51,8 @@ function dumpTypescript(filename, outputDir) {
 	console.log('data dumped!');
 }
 
-function dumpActions(filename, outputDir) {
-	var parser = require('../lib/buildAction.js');
-	var data = parser(filename);
-	var buf = '';
-	for (var i in data) {
-		var args = data[i].args.join(',');
-		buf += i + ': function(' + args + '){return ' + data[i].action + '},\n';
-	}
-	buf = 'module.exports = {\n' + buf + '}';
-	fs.writeFileSync(outputDir, buf);
-	console.log(outputDir + ' dumped!');
-}
-
 var mydump;
-if (program.buildaction) {
-	mydump = dumpActions
-} else if (program.typescript) {
+if (program.typescript) {
 	mydump = dumpTypescript
 } else {
 	mydump = dump
